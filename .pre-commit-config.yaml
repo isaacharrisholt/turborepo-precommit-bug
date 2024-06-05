@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      - id: turbo-lint
+        name: turbo lint
+        entry: env CI=1 turbo run lint
+        language: system
+        pass_filenames: false
+        always_run: true
+        exclude: '.turbo'
